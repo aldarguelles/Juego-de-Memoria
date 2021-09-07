@@ -1,0 +1,48 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.contenedor{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background: url(fondoMadera.jpg);
+	background-size: 100%;
+}
+
+.tiempo{
+	margin-right: auto;
+}
+
+.movimientos{
+	margin-right: auto;
+	margin-bottom: auto;
+}
+
+.cartas-contenedor{
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 20px;
+	width: 90%;
+	height: 70%;
+	margin-bottom: 4%;
+}
+
+.carta-grid-item{
+	display: flex;
+	border-radius: 5px;
+	background: #999999;
+	box-shadow: 0px 0px 15px 1px #cccccc;
+}
+
+.icono{
+	margin: auto;
+	cursor: default;
+	font-family: "Material Icons";
+	font-size: 40px;
+}
