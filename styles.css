@@ -1,0 +1,188 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.contenedor{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background: url(fondoMadera.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.puntaje{
+	display: flex;
+	flex-wrap: wrap;
+	width: 262px;
+	margin-right: auto;
+	margin-bottom: auto;
+	padding: 3px;
+}
+
+.icon{
+	margin: auto;
+	padding: 7px;
+	background: #6666ff;
+	color: #fff;
+	margin-bottom: 2px;
+	font-weight: bold;
+	font-size: 16px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.puntaje h2{
+	padding-left: 4px;
+	width: 220px;
+	background: #cccccc;
+	margin-bottom: 2px;
+	font-family: "Poppins", sans-serif;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.cartas-contenedor{
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 20px;
+	width: 90%;
+	height: 70%;
+	margin-bottom: 4%;
+}
+
+.carta-grid-item{
+	display: flex;
+	position: relative;
+	border-radius: 5px;
+	background: #cccccc;
+	box-shadow: 0px 0px 15px 1px #999999;
+	transition: all ease .3s;
+	transform: perspective(600px) rotateY(0deg);
+	transform-style: preserve-3d;
+}
+
+.frontal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 5px;
+	backface-visibility: hidden;
+}
+
+.icono{
+	z-index: 5;
+	margin: auto;
+	bottom: auto;
+	cursor: default;
+	font-family: "Material Icons";
+	font-size: 40px;
+	transition: all ease .3s;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: visible;
+}
+
+.comparando{
+	transition: all ease .3s;
+	transform: perspective(600px) rotateY(180deg);
+}
+
+.descubierta{
+	background: #6666ff;
+	color: #fff;
+	transition: all ease .3s;
+	transform: perspective(600px) rotateY(180deg);
+}
+
+.fondo{
+	display: flex;
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .4);
+	backdrop-filter: blur(2px);
+}
+
+.modal{
+	display: grid;
+	position: relative;
+	grid-template-rows: 30px 30px 1fr 35px repeat(4, 1fr);
+	margin: auto;
+	width: 320px;
+	height: 400px;
+	padding: 30px;
+	background: #cccccc;
+	border-radius: 2px;
+}
+
+.modal span{
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	font-size: 25px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.modal h2{
+	margin: auto;
+}
+
+.modal .titulo{
+	font-size: 30px;
+}
+
+.modal .indicador{
+	font-size: 20px;
+}
+
+.modal h3{
+	font-size: 13px;
+	color: #ff3333;
+}
+
+.modal .ranking{
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	height: 200px;
+}
+
+.modal input[type="text"]{
+	height: 30px;
+	padding-left: 3px;
+	border: none;
+	border-bottom: 2px solid black;
+	background: #ccc;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	outline: none;
+}
+
+.modal input[type="button"]{
+	grid-row: 8/9;
+	padding: 15px;
+	margin: auto;
+	background: #6666ff;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	outline: none;
+	border: none;
+	transition: all 50ms;
+}
+
+.modal input[type="button"]:hover{
+	outline: 2px solid #000099;
+    outline-offset: -2px;
+	box-shadow: 0px 0px 3px 0px black;
+}
+
+.modal input[type="button"]:active{
+	background: #3333ff;
+}
